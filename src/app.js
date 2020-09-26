@@ -5,6 +5,7 @@ const { Module } = require('module')
 const app=express()
 const hbs=require('hbs')
 const request=require('request')
+const port=process.env.PORT || 3000 //set env variable as port
 
 //Set up path for express to access the HTML file 
 console.log(__dirname)
@@ -149,8 +150,8 @@ app.get('*',(req,res)=>{
 
 
 
-app.listen(3000,()=>{
-    console.log("Port 3000 is started")
+app.listen(port,()=>{
+    console.log("Port port is started")
 })
 
 
